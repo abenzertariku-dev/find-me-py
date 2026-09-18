@@ -22,9 +22,13 @@ import time
 from datetime import datetime, timezone
 
 import requests
+from dotenv import load_dotenv
 from flask import Flask, Response, jsonify, request, send_from_directory
 from flask_cors import CORS
 from pymongo import MongoClient
+
+# Load GOOGLE_PLACES_API_KEY / MONGO_URI from the local .env file if present.
+load_dotenv()
 
 # ---------------------------------------------------------------------------
 # Configuration
